@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env: {
-    GOOGLE_URL: process.env.GOOGLE_URL,
-  }
+  optimizeFonts: false,
 }
 
 module.exports = nextConfig
