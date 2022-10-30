@@ -29,7 +29,7 @@ export const AppHeader =  () => {
 
     return(
         <header className={styles.container}>
-            <Link href="/stats">
+            <Link href="/">
                 <img className={styles.logo} src='/stats.svg' alt="logo" />
             </Link>
             <nav>
