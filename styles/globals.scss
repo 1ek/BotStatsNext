@@ -1,0 +1,327 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background-color: $bg-dark;
+}
+
+html[data-theme = 'dark'] {
+    body {
+        background-color: $bg-dark;
+    }
+}
+html[data-theme = 'light'] {
+    body {
+        background-color: $bg-light;
+    }
+}
+
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+rect {
+    fill: #fff;
+}
+
+@media(max-width: 660px) {
+    .app {
+        &__filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: transparent;
+        }
+    }
+
+    .search {
+        width: 100px;
+        height: 30px;
+        min-height: 30px;
+    }
+
+    .server {
+        &__control {
+            width: max-content !important;
+        }
+        &__value-container {
+            font-size: 20px !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+@media(max-width: 395px) {
+    .app {
+        &__filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: transparent;
+        }
+    }
+
+    .search {
+        padding: 0 20px;
+        width: 70px;
+        height: 25px;
+        min-height: 25px;
+        font-size: 20px;
+        background: white url(../assets/search.svg) no-repeat 5px 5px;
+    }
+
+    .server {
+        &__control {
+            width: 130px!important;
+            height: 25px!important;
+            min-height: 25px !important;
+        }
+        &__value-container {
+            font-size: 20px !important;
+            padding-top: 0px !important;
+            padding-bottom: 4px !important;
+            // height: 25px!important;
+        }
+        &__indicators {
+            height: 25px !important;
+        }
+    }
+}
+
+// ***************************************************************************************************************************
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+// @import '../../styles/variables.scss';
+// font-family: 'Roboto Condensed', sans-serif;
+
+
+
+.bot {
+    &__table-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        min-width: 1200px;
+    }
+}
+
+table {
+    border-collapse:collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0, .9);
+    min-width: 1200px;
+    overflow: hidden;
+    color: #000;
+    font-size: 18px;
+    width: 90%;
+    // display: block;
+}
+
+thead tr {
+    background-color: rgba(18, 18, 18, 0.7);
+    color:#fff;
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+
+th {
+    border-collapse:collapse;
+    padding: 8px 12px;
+    font-size: 25px;
+    border: 0 none !important
+}
+
+
+td {
+    border-collapse:collapse;
+    padding: 10px 12px;
+    font-size: 22px;
+    border: 0 none !important
+    
+}
+
+
+
+tbody tr {
+    background-color: white;
+    border: 0 none !important;
+    border-bottom: 1px solid #dddddd !important;
+    text-align: center;
+    border: 0 none !important
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: rgb(241, 241, 241);
+   
+}
+
+tbody tr:hover {
+    background-color: rgb(221, 238, 239);
+ }
+
+.dot {
+    &__green {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #30E457;
+        box-shadow: 0 0 3px 2px rgba($color: #30E457, $alpha: .40);
+        margin-left: 3px;
+    }
+    &__red {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: red;
+        box-shadow: 0 0 3px 2px rgba($color: red, $alpha: .40);
+        margin-left: 3px;
+    }
+}
+
+.table {
+    &__name-td {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__btn {
+        border: none;
+        background-color: transparent;
+        font-size: 10px;
+        color: #fff;
+        line-height: 1;
+        vertical-align: middle;
+        padding: 2px 4px;
+        cursor: pointer;
+        transition: transform 300ms ease-out;
+    }
+}
+
+.sort-reverse {
+    transform: rotate(180deg);   
+}
+
+html[data-theme = 'light'] {
+    table {
+        box-shadow: 0 0 20px rgba(136, 118, 94, 0.9);
+    }
+}
+html[data-theme = 'dark'] {
+    table {
+        box-shadow: 0 0 20px rgba(0,0,0, .9);
+    }
+}
+
+// .wrapper {
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+// }
+
+@media (max-width: 1250px) {
+    .bot {
+        &__table-container {
+            display: inline-block;
+            margin-top: 10px;
+            position: absolute;
+            justify-content: center;
+            min-width: 0;
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+    table {
+        border-collapse:collapse;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0, .9);
+        min-width: 0;
+        color: #000;
+        font-size: 18px;
+        width: 1200px;
+    }
+    .wrapper {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        width: 100%;
+    }
+    th {
+        border-collapse:collapse;
+        padding: 4px 8px;
+        font-size: 20px;
+        border: 0 none !important
+    }
+    
+    
+    td {
+        border-collapse:collapse;
+        padding: 4px 8px;
+        font-size: 17px;
+        border: 0 none !important
+        
+    }
+    .spinner {
+        margin-top: 50px;
+    }
+    
+}
+
+
+@media (max-width: 800px) {
+    table {
+ 
+        width: 800px;
+    }
+    .spinner {
+        margin-top: 50px;
+    }
+
+}

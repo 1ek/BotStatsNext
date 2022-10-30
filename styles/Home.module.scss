@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+.middle__section {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 940px) {
+    .middle__section {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media (max-width: 660px) and (min-width: 635px){
+    .middle__section {
+        margin-top: 20px;
+        display: flex;
+        column-gap: 30px;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.total {
+    &__money {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items:center;
+    
+    }
+    &__digits {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-family: 'Teko', sans-serif;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 1px;
+    }
+    &__img {
+        width: 50px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .total__img {
+        width: 40px;
+    }
+}
+
+html[data-theme='light'] {
+    .total__digits {
+        color: #000;
+        rect {
+            fill:#000;
+        }
+    }
+}

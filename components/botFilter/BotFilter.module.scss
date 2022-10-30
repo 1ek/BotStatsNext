@@ -1,0 +1,103 @@
+@import '../../styles/variables.scss';
+
+.app {
+    &__filter {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 44px;
+        background-color: transparent;
+    }
+}
+
+.server {
+    &__control:focus {
+        outline: none;
+    }
+}
+
+.search {
+    color: '#000' !important;
+    width: 190px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 20px;
+    padding: 0 30px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background: white url(../../assets/search.svg) no-repeat 7px 7px;
+}
+
+
+.search:focus {
+    box-shadow: 0 0 0 2px #777777;
+}
+
+
+@media(max-width: 660px) {
+    .app {
+        &__filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: transparent;
+        }
+    }
+
+    .search {
+        width: 100px;
+        height: 30px;
+        min-height: 30px;
+    }
+
+    .server {
+        &__control {
+            width: max-content !important;
+        }
+        &__value-container {
+            font-size: 20px !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+@media(max-width: 395px) {
+    .app {
+        &__filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: transparent;
+        }
+    }
+
+    .search {
+        padding: 0 20px;
+        width: 70px;
+        height: 25px;
+        min-height: 25px;
+        font-size: 20px;
+        background: white url(../../assets/search.svg) no-repeat 5px 5px;
+    }
+
+    .server {
+        &__control {
+            width: 130px!important;
+            height: 25px!important;
+            min-height: 25px !important;
+        }
+        &__value-container {
+            font-size: 20px !important;
+            padding-top: 0px !important;
+            padding-bottom: 4px !important;
+            // height: 25px!important;
+        }
+        &__indicators {
+            height: 25px !important;
+        }
+        
+    }
+}
