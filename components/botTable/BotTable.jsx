@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-import SpinnerContent from '../Spinner/SpinnerContent'
+import SpinnerContent from '../spinner/SpinnerContent'
 
 import { useGetAllStatsQuery } from '../../slices/apiSlice'
 
