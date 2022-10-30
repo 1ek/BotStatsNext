@@ -136,7 +136,15 @@ rect {
 // @import '../../styles/variables.scss';
 // font-family: 'Roboto Condensed', sans-serif;
 
-
+.total__digits {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
 
 .bot {
     &__table-container {
