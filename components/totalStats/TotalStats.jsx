@@ -1,6 +1,6 @@
 import s from './TotalStats.module.scss'
 
-import SpinnerText from '../Spinner/SpinnerText'
+import SpinnerText from '../spinner/SpinnerText'
 
 
 import { useGetAllStatsQuery } from '../../slices/apiSlice'

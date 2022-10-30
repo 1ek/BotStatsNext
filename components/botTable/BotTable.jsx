@@ -62,7 +62,7 @@ const BotTable = () => {
         
         return sortedData
     }
-
+    //eslint-disable-next-line
     const sortedData = useCallback(() => sortData({tableData: botList, sortKey, reverse: sortOrder === 'desc'}),[botList, sortKey, sortOrder])
 
     function renderBots(arr) {
