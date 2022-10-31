@@ -23,19 +23,24 @@ const models = [
     { id: 5, src: '/assets/player_models/5.png'},
     { id: 14, src: '/assets/player_models/14.png'},
     { id: 18, src: '/assets/player_models/18.png'},
+    { id: 20, src: '/assets/player_models/20.png'},
     { id: 22, src: `/assets/player_models/22.png`},
     { id: 68, src: '/assets/player_models/68.png'},
     { id: 73, src: '/assets/player_models/73.png'},
     { id: 78, src: '/assets/player_models/78.png'},
+    { id: 102, src: '/assets/player_models/102.png'},
     { id: 112, src: '/assets/player_models/112.png'},
     { id: 139, src: '/assets/player_models/139.png'},
+    { id: 167, src: '/assets/player_models/167.png'},
+    { id: 175, src: '/assets/player_models/175.png'},
+    { id: 213, src: '/assets/player_models/213.png'},
+    { id: 242, src: '/assets/player_models/242.png'},
     { id: 258, src: '/assets/player_models/258.png'},
+    { id: 268, src: '/assets/player_models/268.png'},
     { id: 274, src: '/assets/player_models/274.png'},
+    { id: 290, src: '/assets/player_models/290.png'},
     { id: 294, src: '/assets/player_models/294.png'},
-    { id: 370, src: '/assets/player_models/370.png'},
-  
-   
-  
-    
+    { id: 299, src: '/assets/player_models/299.png'},
+    { id: 370, src: '/assets/player_models/370.png'},  
   ]
   export default models
