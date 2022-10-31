@@ -261,6 +261,15 @@ html[data-theme = 'light'] {
     table {
         box-shadow: 0 0 20px rgba(136, 118, 94, 0.9);
     }
+    .total__digits {
+        color: #000;
+    }
+    .rect {
+        fill: #000;
+    }
+    .spinner_content {
+        fill: #000;
+    }
 }
 html[data-theme = 'dark'] {
     table {
