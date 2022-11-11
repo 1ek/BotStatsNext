@@ -68,7 +68,7 @@ const BotChat = ({opened}) => {
 
     function connect() {
         conInp.current.value = ''
-        socket.current = new WebSocket('ws://194.87.234.217:5000')
+        socket.current = new WebSocket('wss://1ek.xyz:5000')
         let uid
 
         socket.current.onopen = () => {
