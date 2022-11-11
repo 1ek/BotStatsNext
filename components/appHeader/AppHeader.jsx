@@ -18,6 +18,7 @@ export const AppHeader =  () => {
 
     useEffect(() => {
         setMounted(true)
+        setTheme('dark')
     }, [])
 
     let light_fill = theme === 'light' ? '#fff' : '#777777'

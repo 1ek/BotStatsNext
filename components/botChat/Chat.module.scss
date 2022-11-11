@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+.connect {
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__input {
+        font-size: 40px;
+        padding-left: 10px;
+        outline: none;
+        opacity: 1;
+        border-radius: 20px;
+        border: none;
+        color: #fff;
+        width: 300px;
+        height: 55px;
+        margin-bottom: 10px;
+        font-family: 'Teko', sans-serif !important;
+    }
+    &__input::placeholder {
+        padding-left: 10px;
+    }
+    &__button {
+        font-size: 40px;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        width: 150px;
+        height: 55px;   
+    }
+    &__button:hover {
+        background-color: #30E457;
+    }
+    &__button:focus {
+        background-color: #30E457;
+    }
+    &__to {
+        color: #fff;
+    }
+}
+
+.chat {
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items:center;
+        position: relative;
+    }
+    &__sender {
+        display: flex;
+    }
+    &__input:disabled::placeholder{
+        color: rgb(255, 0, 0) !important;
+    }
+    &__info {
+        position: absolute;
+        top: 0;
+        // right: 0;
+        color: #fff;
+    }
+    &__msglist{
+        // border: 1px solid red;
+        width: 100%;
+        height: 90%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &__msglist::-webkit-scrollbar {
+        width: 8px;
+    }
+    &__msglist::-webkit-scrollbar-track {
+        background-color: rgb(47, 47, 47);
+        border-radius: 4px;
+    }
+    &__msglist::-webkit-scrollbar-thumb {
+    //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    &__message {
+        white-space: pre-wrap;
+        color: #fff; 
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 1;
+        padding: 2px 10px;
+    }
+    &__word {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}

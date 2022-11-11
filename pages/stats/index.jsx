@@ -2,7 +2,7 @@ import Head from 'next/head'
 import TotalStats from '../../components/totalStats/TotalStats'
 import BotTable from '../../components/botTable/BotTable'
 
-export default function Home() {
+export default function Stats() {
   return (
     <>
       <Head>

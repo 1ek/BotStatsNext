@@ -1,9 +1,11 @@
 import s from './BotCard.module.scss'
 import models from '../../data/models';
 import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { selectBotChat } from '../../slices/botChatSlice'
 
 
-const BotCard = ({bot}) => {
+const BotCard = ({bot, clickHandler}) => {
     function numberWithSpaces(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
@@ -16,9 +18,17 @@ const BotCard = ({bot}) => {
         return botModel[0].src
     }
     
+    const dispatch = useDispatch()
+
+
+
+    const selectBot = (bot) => {
+        clickHandler()
+        dispatch(selectBotChat(bot))
+    }
 
     return (
-        <li className={s.bot__card}>
+        <li className={s.bot__card} onClick={() => selectBot(bot)}>
             <div className={bot.connected ? s.bot__dot_green : s.bot__dot_red}></div>
             <Image className={s.bot__model} src={getModel(bot.model)} alt="Bot skin model" width={190} height={70}/>
             <div className={s.bot__info}>

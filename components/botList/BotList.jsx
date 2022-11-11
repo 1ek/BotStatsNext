@@ -1,15 +1,24 @@
 import { useGetAllStatsQuery } from "../../slices/apiSlice"
+
 import BotCard from "../botCard/BotCard"
+import BotChat from "../botChat/BotChat"
 import { useSelector } from "react-redux"
 import SpinnerContent from "../spinner/SpinnerContent"
+import { useState } from "react"
+import SimpleAnimatedModal from "../modal/SimpleAnimatedModal"
 
 import s from './BotList.module.scss'
 
 const BotList = () => {
+    const [opened, setOpened] = useState(false)
+
+    function clickHandler() {
+        setOpened(true)
+    }
 
     function renderBots(arr) {
         const bots = arr.map((bot, i) => {
-            return <BotCard bot={bot} key={i}/>
+            return <BotCard bot={bot} key={i} clickHandler={clickHandler}/>
         })
         return bots
     }
@@ -72,12 +81,14 @@ const BotList = () => {
         visible = filterSort(visible, selectedSort)
     
     const renderList = renderBots(visible)
-
     return(
         <div>
             <ul className={s.bot__list}>
                 {isLoading ? <SpinnerContent/> : renderList}
             </ul>
+            <SimpleAnimatedModal opened={opened} onClose={() => setOpened(false)}>
+                <BotChat opened={opened}/>
+            </SimpleAnimatedModal>
         </div>
     )
 }

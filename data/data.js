@@ -27,3 +27,5 @@ export const servers = [
       { value: 'hightolow', label: 'High to low' },
       { value: 'lowtohigh', label: 'Low to high' },
   ]
+
+  export const ANIMATION_TIME = 300
