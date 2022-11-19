@@ -28,7 +28,7 @@ const BotChat = ({opened}) => {
     }
 
     function sendDisconnect()  {
-        console.log('Disconnect')
+        // console.log('Disconnect')
         const message = {
             event: 'disconnection',
             botid: selectedBot?.server + selectedBot?.name,
@@ -69,12 +69,11 @@ const BotChat = ({opened}) => {
     function connect() {
         conInp.current.value = ''
         socket.current = new WebSocket('wss://1ek.xyz:5000')
-        console.log(socket.current)
         let uid
 
         socket.current.onopen = () => {
             setConnected(true)
-            console.log('Connected')
+            // console.log('Connected')
             uid = Date.now()
             const message = {
                 event: 'connection',
@@ -97,7 +96,7 @@ const BotChat = ({opened}) => {
                     break 
                 case 'botmsg': 
                     if (message.botid == (selectedBot?.server + selectedBot?.name)) {
-                        console.log(message.message)
+                        // console.log(message.message)
                         setMessage(prev => [message, ...prev])
                     }
                     break
@@ -111,10 +110,10 @@ const BotChat = ({opened}) => {
         }
 
         socket.current.onclose = () => {
-            console.log('Closed')
+            // console.log('Closed')
         }
         socket.current.onerror = () => {
-            console.log('Error')
+            // console.log('Error')
         }
     
 
@@ -127,8 +126,8 @@ const BotChat = ({opened}) => {
         colors.unshift('')
         let strings = text.split(reg)
         strings = strings.filter(string => !string.match(reg))
-        console.log(colors)
-        console.log(strings)
+        // console.log(colors)
+        // console.log(strings)
         return (
             <>
                 {strings.map((string, i) => 
