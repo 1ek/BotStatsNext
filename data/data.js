@@ -21,6 +21,7 @@ export const servers = [
     { value: 'PAGE', label: 'PAGE' },
     { value: 'SUNCITY', label: 'SUN CITY' },
     { value: 'QUEENCREEK', label: 'QUEEN CREEK' },
+    { value: 'HOLIDAY', label: 'HOLIDAY' },
   ]
   
   export const sort = [
