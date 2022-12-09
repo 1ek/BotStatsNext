@@ -1,6 +1,6 @@
 # BotStats 
 
-## RakSamp bot statistics
+## RakSamp bots statistics
 
 **Bot** - an emulated SAMP account located on the VDS, communicating with the server using the magic of network programming.
 
