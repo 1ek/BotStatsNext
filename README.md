@@ -1,35 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BotStats 
 
-## Getting Started
+## RakSamp bot statistics
 
-First, run the development server:
+**Bot** - an emulated SAMP account located on the VDS, communicating with the server using the magic of network programming.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Specifically, I'm using RakSamp - a minimalistic fake client with the ability to expand functionality using the Lua API.
+So, bot is able to execute LUA scripts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Scheme1.](https://i.ibb.co/p10pF19/scheme1.png "Scheme1")
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Every hour bots send statistics to the database
+Bot collects all the necessary information, then generates a JSON string, which is sent to the API that manages the placement of information in the database.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![Scheme2.](https://i.ibb.co/jDPHG34/image.png "Scheme2")
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### So, we have a database with statistics of hundreds of bots. And that's where the frontend comes into play
 
-## Learn More
+![Scheme3.](https://i.ibb.co/71Gh3C7/image.png "Scheme3")
 
-To learn more about Next.js, take a look at the following resources:
+### Currently in development:
+* **Realtime interaction with the bot's server chat via WebSockets**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# BotStatsNext" 
+![Scheme4.](https://i.ibb.co/WcpbDjN/image.png "Scheme4")
