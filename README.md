@@ -1,10 +1,10 @@
 # BotStats 
 
-## RakSamp bots statistics
+## RаkSamp bots statistics
 
 **Bot** - an emulated SAMP account located on the VDS, communicating with the server using the magic of network programming.
 
-Specifically, I'm using RakSamp - a minimalistic fake client with the ability to expand functionality using the Lua API.
+Specifically, I'm using RаkSamp - a minimalistic fake client with the ability to expand functionality using the Lua API.
 So, bot is able to execute LUA scripts.
 
 ![Scheme1.](https://i.ibb.co/p10pF19/scheme1.png "Scheme1")
